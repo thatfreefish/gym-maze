@@ -5,7 +5,7 @@ import os
 
 
 class MazeView2D:
-
+    #初始化的值按照“__name__”中实例化。
     def __init__(self, maze_name="Maze2D", maze_file_path=None,
                  maze_size=(30, 30), screen_size=(600, 600),
                  has_loops=False, num_portals=0):
