@@ -138,7 +138,7 @@ class MazeView2D:
         line_colour = (0, 0, 0, 255)
 
         # drawing the horizontal lines
-        for y in range(self.maze.MAZE_H + 1):
+        for y in range(self.maze.MAZE_H + 1): #11
             pygame.draw.line(self.maze_layer, line_colour, (0, y * self.CELL_H),
                              (self.SCREEN_W, y * self.CELL_H))
 
