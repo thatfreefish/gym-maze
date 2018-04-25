@@ -255,11 +255,11 @@ class MazeView2D:
 
     @property
     def CELL_W(self):
-        return float(self.SCREEN_W) / float(self.maze.MAZE_W)
+        return float(self.SCREEN_W) / float(self.maze.MAZE_W) #500/10=50
 
     @property
     def CELL_H(self):
-        return float(self.SCREEN_H) / float(self.maze.MAZE_H)
+        return float(self.SCREEN_H) / float(self.maze.MAZE_H) #500/10=50
 
 
 class Maze:
