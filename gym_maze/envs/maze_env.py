@@ -35,14 +35,14 @@ class MazeEnv(gym.Env):
         else:
             raise AttributeError("One must supply either a maze_file path (str) or the maze_size (tuple of length 2)")
 
-        self.maze_size = self.maze_view.maze_size
+        self.maze_size = self.maze_view.maze_size #10x10
 
         # forward or backward in each dimension
-        self.action_space = spaces.Discrete(2*len(self.maze_size))
+        self.action_space = spaces.Discrete(2*len(self.maze_size)) #2*2
 
         # observation is the x, y coordinate of the grid
-        low = np.zeros(len(self.maze_size), dtype=int)
-        high =  np.array(self.maze_size, dtype=int) - np.ones(len(self.maze_size), dtype=int)
+        low = np.zeros(len(self.maze_size), dtype=int) #2 （0，0）
+        high =  np.array(self.maze_size, dtype=int) - np.ones(len(self.maze_size), dtype=int) #10x10-1x1=9x9 （9,9）
         self.observation_space = spaces.Box(low, high)
 
         # initial condition
