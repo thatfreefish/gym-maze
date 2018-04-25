@@ -27,7 +27,7 @@ class MazeView2D:
                     maze_file_path = rel_path
                 else:
                     raise FileExistsError("Cannot find %s." % maze_file_path)
-            self.__maze = Maze(maze_cells=Maze.load_maze(maze_file_path))
+            self.__maze = Maze(maze_cells=Maze.load_maze(maze_file_path))#加载文件后返回的可能是个对应maze环境的矩阵
 
         self.maze_size = self.__maze.maze_size
         # to show the right and bottom border
@@ -307,6 +307,7 @@ class Maze:
             np.save(file_path, self.maze_cells, allow_pickle=False, fix_imports=True)
 
     @classmethod
+    #加载对应的那个maze文件.npy或.mpz结尾的！
     def load_maze(cls, file_path):
 
         if not isinstance(file_path, str):
