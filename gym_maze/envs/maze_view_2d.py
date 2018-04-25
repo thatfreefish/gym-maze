@@ -315,7 +315,7 @@ class Maze:
         if not os.path.exists(file_path):
             raise ValueError("Cannot find %s." % file_path)
 
-        else:
+        else: #Load arrays or pickled objects from .npy, .npz or pickled files.
             return np.load(file_path, allow_pickle=False, fix_imports=True)
 
     def _generate_maze(self):
