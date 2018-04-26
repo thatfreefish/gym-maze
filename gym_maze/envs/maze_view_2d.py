@@ -151,11 +151,11 @@ class MazeView2D:
         for x in range(len(self.maze.maze_cells)):
             for y in range (len(self.maze.maze_cells[x])):
                 # check the which walls are open in each cell
-                walls_status = self.maze.get_walls_status(self.maze.maze_cells[x, y])
+                walls_status = self.maze.get_walls_status(self.maze.maze_cells[x, y])#maze_cells中存储的是每个cell各个方向的是否有墙！
                 dirs = ""
-                for dir, open in walls_status.items():
+                for dir, open in walls_status.items(): #以列表返回可遍历的(键, 值) 元组数组
                     if open:
-                        dirs += dir
+                        dirs += dir #字符串运算
                 self.__cover_walls(x, y, dirs)
 
     def __cover_walls(self, x, y, dirs, colour=(0, 0, 255, 15)):
