@@ -169,8 +169,8 @@ class MazeView2D:
 
         for dir in dirs:
             if dir == "S":
-                line_head = (dx + 1, dy + self.CELL_H)
-                line_tail = (dx + self.CELL_W - 1, dy + self.CELL_H)
+                line_head = (dx + 1, dy + self.CELL_H) #需要画的线的首值
+                line_tail = (dx + self.CELL_W - 1, dy + self.CELL_H)#需要画的线的尾值
             elif dir == "N":
                 line_head = (dx + 1, dy)
                 line_tail = (dx + self.CELL_W - 1, dy)
