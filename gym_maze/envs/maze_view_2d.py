@@ -86,7 +86,7 @@ class MazeView2D:
             pass
 
     def move_robot(self, dir):
-        if dir not in self.__maze.COMPASS.keys():
+        if dir not in self.__maze.COMPASS.keys(): #['S', 'E', 'W', 'N']
             raise ValueError("dir cannot be %s. The only valid dirs are %s."
                              % (str(dir), str(self.__maze.COMPASS.keys())))
 
