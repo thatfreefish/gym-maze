@@ -38,7 +38,7 @@ class MazeEnv(gym.Env):
         self.maze_size = self.maze_view.maze_size #10x10
 
         # forward or backward in each dimension
-        self.action_space = spaces.Discrete(2*len(self.maze_size)) #2*2
+        self.action_space = spaces.Discrete(2*len(self.maze_size)) #2*2 {0, 1, 2, 3} 链接：http://gym.openai.com/docs/#spaces
 
         # observation is the x, y coordinate of the grid
         low = np.zeros(len(self.maze_size), dtype=int) #2 （0，0）
