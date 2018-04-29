@@ -68,7 +68,7 @@ class MazeEnv(gym.Env):
 
     def _step(self, action):
         if isinstance(action, int):
-            self.maze_view.move_robot(self.ACTION[action])
+            self.maze_view.move_robot(self.ACTION[action]) #第14行：ACTION = ["N", "S", "E", "W"]
         else:
             self.maze_view.move_robot(action)
 
