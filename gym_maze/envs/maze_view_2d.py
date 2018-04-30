@@ -132,7 +132,7 @@ class MazeView2D:
                 pygame.display.flip()
 
             return np.flipud(np.rot90(pygame.surfarray.array3d(pygame.display.get_surface())))
-
+    #drawing the horizontal/vertical lines;根据maze_file找出每个位置（x,y）4面有墙哪几面有墙！然后画出来！
     def __draw_maze(self):
 
         line_colour = (0, 0, 0, 255)
