@@ -200,10 +200,10 @@ class MazeView2D:
     def __draw_goal(self, colour=(150, 0, 0), transparency=235):
 
         self.__colour_cell(self.goal, colour=colour, transparency=transparency)
-
+    #随机取出6种颜色，在对应6个location上画出随机颜色的cell
     def __draw_portals(self, transparency=160):
 
-        colour_range = np.linspace(0, 255, len(self.maze.portals), dtype=int)
+        colour_range = np.linspace(0, 255, len(self.maze.portals), dtype=int)#self.maze.portals=6
         colour_i = 0
         for portal in self.maze.portals:
             colour = ((100 - colour_range[colour_i])% 255, colour_range[colour_i], 0)
@@ -390,7 +390,7 @@ class Maze:
                 if self.is_breakable((x, y), dir):
                     self.maze_cells[x, y] = self.__break_walls(self.maze_cells[x, y], dir)
                     break
-
+    #环境中6个除了起始点外方框是随机取得！
     def __set_random_portals(self, num_portal_sets, set_size=2):
         # find some random cells to break
         num_portal_sets = int(num_portal_sets)
@@ -401,7 +401,7 @@ class Maze:
         num_portal_sets = min(max_portal_sets, num_portal_sets)
 
         # the first and last cells are reserved
-        cell_ids = random.sample(range(1, self.MAZE_W * self.MAZE_H - 1), num_portal_sets*set_size)
+        cell_ids = random.sample(range(1, self.MAZE_W * self.MAZE_H - 1), num_portal_sets*set_size) #3x2=6 原来这随机选择的就是TM的6个方框呀（除了起始点之外）  
 
         for i in range(num_portal_sets):
             # sample the set_size number of sell
