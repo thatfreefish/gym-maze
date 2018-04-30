@@ -192,7 +192,7 @@ class MazeView2D:
         r = int(min(self.CELL_W, self.CELL_H)/5 + 0.5)
 
         pygame.draw.circle(self.maze_layer, colour + (transparency,), (x, y), r)
-
+    #画出起始点
     def __draw_entrance(self, colour=(0, 0, 150), transparency=235):
 
         self.__colour_cell(self.entrance, colour=colour, transparency=transparency)
