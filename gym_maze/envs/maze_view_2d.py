@@ -369,7 +369,7 @@ class Maze:
 
         if self.has_loops:
             self.__break_random_walls(0.2)
-
+        #self.num_portals=3,根据MazeView2D类在maze_env.py文件中使用赋值为3，而本文件另一个class是Maze的num_portals也等于MazeView2D的num_portals
         if self.num_portals > 0:
             self.__set_random_portals(num_portal_sets=self.num_portals, set_size=2)
 
