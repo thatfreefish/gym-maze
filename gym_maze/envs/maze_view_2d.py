@@ -184,7 +184,7 @@ class MazeView2D:
                 raise ValueError("The only valid directions are (N, S, E, W).")
 
             pygame.draw.line(self.maze_layer, colour, line_head, line_tail)
-
+    #根据移动的坐标（x，y）计算出机器人（圆）的位置和半径r，最后用draw画出来
     def __draw_robot(self, colour=(0, 0, 150), transparency=255):
 
         x = int(self.__robot[0] * self.CELL_W + self.CELL_W * 0.5 + 0.5)
