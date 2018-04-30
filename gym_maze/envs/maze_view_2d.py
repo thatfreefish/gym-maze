@@ -452,7 +452,7 @@ class Maze:
     @property
     def portals(self):
         return tuple(self.__portals)
-
+    #字典
     def get_portal(self, cell):
         if cell in self.__portals_dict:
             return self.__portals_dict[cell]
