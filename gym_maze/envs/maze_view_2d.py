@@ -210,7 +210,7 @@ class MazeView2D:
             colour_i += 1
             for location in portal.locations:
                 self.__colour_cell(location, colour=colour, transparency=transparency)
-
+    #计算出应该画出方形cell位置坐标以及长宽，然后填充颜色
     def __colour_cell(self, cell, colour, transparency):
 
         if not (isinstance(cell, (list, tuple, np.ndarray)) and len(cell) == 2):
