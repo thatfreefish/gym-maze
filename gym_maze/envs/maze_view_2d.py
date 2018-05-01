@@ -159,7 +159,7 @@ class MazeView2D:
                 self.__cover_walls(x, y, dirs) #x,y 是每个位置；dir是w/e/s/n的字符串拼接，反应的是哪几面有墙！
 
     #根据传递过来方位字符串dirs来画出每个cell上4面中哪一面墙是封闭上了！
-    def __cover_walls(self, x, y, dirs, colour=(0, 0, 255, 15)):
+    def __cover_walls(self, x, y, dirs, colour=(0, 0, 255, 15)):#colour前3位是颜色值，最后一位是线宽度！
 
         dx = x * self.CELL_W
         dy = y * self.CELL_H
