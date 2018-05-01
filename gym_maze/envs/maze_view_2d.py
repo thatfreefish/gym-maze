@@ -3,7 +3,7 @@ import random
 import numpy as np
 import os
 
-
+#在使用该类的时候，可以选择加载maze文件的方式；也可以选择参数设置方式
 class MazeView2D:
     #初始化的值按照“__name__”中实例化。
     def __init__(self, maze_name="Maze2D", maze_file_path=None,
