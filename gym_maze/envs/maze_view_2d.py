@@ -148,8 +148,8 @@ class MazeView2D:
                              (x * self.CELL_W, self.SCREEN_H))
 
         # breaking the walls
-        for x in range(len(self.maze.maze_cells)):
-            for y in range (len(self.maze.maze_cells[x])):
+        for x in range(len(self.maze.maze_cells)): #len(self.maze.maze_cells)=10
+            for y in range (len(self.maze.maze_cells[x])): #len(self.maze.maze_cells[x]=10
                 # check the which walls are open in each cell
                 walls_status = self.maze.get_walls_status(self.maze.maze_cells[x, y])#maze_cells中存储的是4位十六进制数每个cell各个方向的是否有墙！
                 dirs = ""
