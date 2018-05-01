@@ -156,7 +156,7 @@ class MazeView2D:
                 for dir, open in walls_status.items(): #以列表返回可遍历的(键, 值) 元组数组
                     if open:
                         dirs += dir #字符串运算
-                self.__cover_walls(x, y, dirs) #x,y 是每个位置；dir是哪几面有墙。
+                self.__cover_walls(x, y, dirs) #x,y 是每个位置；dir是w/e/s/n的字符串拼接，反应的是哪几面有墙！
 
     #根据传递过来方位字符串dirs来画出每个cell上4面中哪一面墙是封闭上了！
     def __cover_walls(self, x, y, dirs, colour=(0, 0, 255, 15)):
