@@ -421,7 +421,7 @@ class Maze:
             # create a dictionary of portals
             for portal_location in portal_locations:
                 self.__portals_dict[portal_location] = portal
-    #检查当前位置的当前方向是否有墙和检查下一方向的位置的当前方向的反向是否有墙
+    #检查当前位置的当前方向是否有墙和检查下一方向的位置的当前方向的反向是否有墙。老哥别搞错哈：this_wall和other_wall为1才能说明是opened！因为line是在黑色line基础上的！
     def is_open(self, cell_id, dir):
         # check if it would be out-of-bound
         x1 = cell_id[0] + self.COMPASS[dir][0]
