@@ -99,7 +99,7 @@ class MazeView2D:
             self.__robot += np.array(self.__maze.COMPASS[dir])
             # if it's in a portal afterward
             if self.maze.is_portal(self.robot):
-                self.__robot = np.array(self.maze.get_portal(tuple(self.robot)).teleport(tuple(self.robot)))
+                self.__robot = np.array(self.maze.get_portal(tuple(self.robot)).teleport(tuple(self.robot)))#6各种分别两两颜色相同，到达一个位置迅速换到另外一个位置！！
             self.__draw_robot(transparency=255)
 
     def reset_robot(self):
