@@ -89,7 +89,7 @@ class MazeView2D:
         if dir not in self.__maze.COMPASS.keys(): #['S', 'E', 'W', 'N']
             raise ValueError("dir cannot be %s. The only valid dirs are %s."
                              % (str(dir), str(self.__maze.COMPASS.keys())))
-
+        #if判断为，是否当前位置当前方向有墙和当前方向所指位置的当前方向的反向是否有墙。如果没有则可以移动机器人！
         if self.__maze.is_open(self.__robot, dir):
 
             # update the drawing
