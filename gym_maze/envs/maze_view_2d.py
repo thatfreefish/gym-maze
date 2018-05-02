@@ -499,7 +499,7 @@ class Maze:
         if "W" in dirs:
             cell |= 0x8
         return cell
-
+    #判断移动前位置移动方向是否有墙，移动后位置移动反方向是否有墙（此处程序即是判断！）
     @classmethod
     def __get_opposite_wall(cls, dirs):
 
