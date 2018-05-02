@@ -445,7 +445,7 @@ class Maze:
     def is_within_bound(self, x, y):
         # true if cell is still within bounds after the move
         return 0 <= x < self.MAZE_W and 0 <= y < self.MAZE_H
-
+    #检查当前位置是否处于__portals_dict字典中：（坐标：Portal类）
     def is_portal(self, cell):
         return tuple(cell) in self.__portals_dict
 
