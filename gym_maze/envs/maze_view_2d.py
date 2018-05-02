@@ -147,7 +147,7 @@ class MazeView2D:
             pygame.draw.line(self.maze_layer, line_colour, (x * self.CELL_W, 0),
                              (x * self.CELL_W, self.SCREEN_H))
 
-        # breaking the walls
+        # breaking the walls 在上面墙壁基础上，画出非墙壁可以通行部分！maze_cells也就是breaking the walls的矩阵
         for x in range(len(self.maze.maze_cells)): #len(self.maze.maze_cells)=10
             for y in range (len(self.maze.maze_cells[x])): #len(self.maze.maze_cells[x]=10
                 # check the which walls are open in each cell
@@ -158,7 +158,7 @@ class MazeView2D:
                         dirs += dir #字符串运算
                 self.__cover_walls(x, y, dirs) #x,y 是每个位置；dir是w/e/s/n的字符串拼接，反应的是哪几面有墙！
 
-    #根据传递过来方位字符串dirs来画出每个cell上4面中哪一面墙是封闭上了！
+    #根据传递过来方位字符串dirs来画出每个cell上4面中哪一面墙是没有被封闭上！也就是浅颜色部分！黑色实体的是__draw_maze中已经画出来的黑色“墙”
     def __cover_walls(self, x, y, dirs, colour=(0, 0, 255, 15)):#colour前3位是颜色值，最后一位是线宽度！
 
         dx = x * self.CELL_W
