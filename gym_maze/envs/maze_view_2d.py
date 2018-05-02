@@ -534,7 +534,7 @@ class Portal:
                 self.__locations.append(tuple(location))
             else:
                 raise ValueError("location must be a list or a tuple.")
-
+    #这就是所谓的“瞬间移动吧”，量子纠缠？！
     def teleport(self, cell):
         if cell in self.locations:
             return self.locations[(self.locations.index(cell) + 1) % len(self.locations)]
